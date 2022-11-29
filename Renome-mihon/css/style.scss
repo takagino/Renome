@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+$color-text: #404040;
+$color-accent: #985e5b;
+$color-bg: #edeff2;
+
+@mixin mq-pc() {
+  @media (min-width:800px) {
+    @content;
+  }
+}
+
+@mixin inner() {
+  max-width: 1200px;
+  width: (560/640)*100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@function rem($v) {
+  @return ($v/15)+rem;
+}
+
+html {
+  font-size: (15/16)*100%;
+
+  @include mq-pc() {
+    font-size: (18/16)*100%;
+  }
+}
+
+body {
+  color: $color-text;
+  font-size: rem(15);
+  font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  line-height: (25/15);
+  letter-spacing: (50/1000)+em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+.card {
+  &__pic {
+    margin-bottom: (30/15)+em;
+  }
+}
+
+.btn {
+  display: block;
+  margin-top: (45/15)+em;
+}
+
+.about {
+  &__title {
+    font-size: rem(20);
+    margin-bottom: (40/20)+em;
+    padding-bottom: (20/20)+em;
+    border-bottom: 2px solid #ddd;
+  }
+
+  &__item {
+    margin-bottom: (60/15)+em;
+  }
+}
