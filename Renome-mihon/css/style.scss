@@ -76,6 +76,7 @@ a {
 .message {
   &__inner {
     @include inner();
+    text-align: center;
 
     span {
       display: inline-block;
@@ -112,5 +113,9 @@ a {
 
   &__title {
     @include title-main();
+  }
+
+  &__desc {
+    overflow-wrap: anywhere;
   }
 }
