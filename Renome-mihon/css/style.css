@@ -35,6 +35,26 @@ a {
   margin-top: 3em;
 }
 
+.contents {
+  max-width: 1200px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 800px) {
+  .contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 800px) {
+  .about {
+    width: 58.3333333333%;
+  }
+}
 .about__title {
   font-size: 1.3333333333rem;
   margin-bottom: 2em;
@@ -45,6 +65,11 @@ a {
   margin-bottom: 4em;
 }
 
+@media (min-width: 800px) {
+  .info {
+    width: 34.1666666667%;
+  }
+}
 .info__title {
   font-size: 1.3333333333rem;
   margin-bottom: 2em;
