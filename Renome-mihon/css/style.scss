@@ -29,10 +29,17 @@ $color-bg: #edeff2;
 }
 
 @mixin title-main() {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   font-size: rem(20);
   margin-bottom: (40/20)+em;
   padding-bottom: (20/20)+em;
   border-bottom: 2px solid #ddd;
+
+  @include mq-pc() {
+    margin-left: 0;
+  }
 }
 
 html {

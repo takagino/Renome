@@ -67,10 +67,20 @@ a {
   }
 }
 .about__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.3333333333rem;
   margin-bottom: 2em;
   padding-bottom: 1em;
   border-bottom: 2px solid #ddd;
+}
+@media (min-width: 800px) {
+  .about__title {
+    margin-left: 0;
+  }
 }
 .about__item {
   margin-bottom: 4em;
@@ -82,10 +92,20 @@ a {
   }
 }
 .info__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.3333333333rem;
   margin-bottom: 2em;
   padding-bottom: 1em;
   border-bottom: 2px solid #ddd;
+}
+@media (min-width: 800px) {
+  .info__title {
+    margin-left: 0;
+  }
 }
 .info__desc {
   overflow-wrap: anywhere;
