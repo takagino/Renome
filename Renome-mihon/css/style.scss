@@ -10,6 +10,10 @@ $color-bg: #edeff2;
   }
 }
 
+@function rem($v) {
+  @return ($v/15)+rem;
+}
+
 @mixin inner() {
   max-width: 1200px;
   width: (560/640)*100%;
@@ -17,8 +21,11 @@ $color-bg: #edeff2;
   margin-right: auto;
 }
 
-@function rem($v) {
-  @return ($v/15)+rem;
+@mixin title-main() {
+  font-size: rem(20);
+  margin-bottom: (40/20)+em;
+  padding-bottom: (20/20)+em;
+  border-bottom: 2px solid #ddd;
 }
 
 html {
@@ -61,13 +68,16 @@ a {
 
 .about {
   &__title {
-    font-size: rem(20);
-    margin-bottom: (40/20)+em;
-    padding-bottom: (20/20)+em;
-    border-bottom: 2px solid #ddd;
+    @include title-main();
   }
 
   &__item {
     margin-bottom: (60/15)+em;
+  }
+}
+
+.info {
+  &__title {
+    @include title-main();
   }
 }
