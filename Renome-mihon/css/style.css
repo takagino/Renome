@@ -35,12 +35,20 @@ a {
   margin-top: 3em;
 }
 
+.visual__pic {
+  width: 100%;
+  height: clamp(400px, 50vw, 600px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .message__inner {
   max-width: 1200px;
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-size: clamp(15px, 1.875vw, 30px);
 }
 .message__inner span {
   display: inline-block;

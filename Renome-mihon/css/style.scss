@@ -80,10 +80,23 @@ a {
   margin-top: (45/15)+em;
 }
 
+.visual {
+  &__pic {
+    width: 100%;
+    // width: 50vw;
+    // min-width: 300px;
+    // max-width: 600px;
+    height: clamp(400px, 50vw, 600px);
+    object-fit: cover;
+  }
+}
+
 .message {
   &__inner {
     @include inner();
     text-align: center;
+    font-size: clamp(15px, 1.875vw, 30px);
+    // font-size: 1.875vw;
 
     span {
       display: inline-block;
