@@ -73,6 +73,16 @@ a {
   margin-top: (45/15)+em;
 }
 
+.message {
+  &__inner {
+    @include inner();
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
 .contents {
   @include inner();
 
