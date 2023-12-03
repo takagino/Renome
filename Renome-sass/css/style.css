@@ -5,7 +5,7 @@
 html {
   font-size: 93.75%;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   html {
     font-size: 112.5%;
   }
@@ -35,8 +35,8 @@ a {
   padding: 40px 0;
 }
 .header__inner {
-  max-width: 1200px;
   width: 88%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -54,12 +54,12 @@ a {
   text-align: center;
 }
 .footer__inner {
-  max-width: 1200px;
   width: 88%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .footer__inner {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +72,7 @@ a {
   margin-right: auto;
   margin-bottom: 1.3333333333em;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .footer__logo {
     margin: 0;
   }
@@ -102,7 +102,7 @@ a {
   line-height: 1;
   text-align: center;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .btn {
     width: 100%;
   }
@@ -125,8 +125,8 @@ a {
   text-align: center;
 }
 .message__inner {
-  max-width: 1200px;
   width: 88%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -138,12 +138,12 @@ a {
 }
 
 .contents__inner {
-  max-width: 1200px;
   width: 88%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .contents__inner {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +155,7 @@ a {
 .about {
   margin-bottom: 6em;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .about {
     width: 58.3333333333%;
   }
@@ -173,12 +173,12 @@ a {
   font-weight: bold;
   line-height: 1.2;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .about__title {
     margin-left: 0;
   }
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .about__list {
     display: flex;
     flex-wrap: wrap;
@@ -189,7 +189,7 @@ a {
 .about__item {
   margin-bottom: 4em;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .about__item {
     width: 47.1428571429%;
     margin-bottom: 0;
@@ -199,7 +199,7 @@ a {
 .info {
   margin-bottom: 6em;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .info {
     width: 33.3333333333%;
   }
@@ -217,7 +217,7 @@ a {
   font-weight: bold;
   line-height: 1.2;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .info__title {
     margin-left: 0;
   }

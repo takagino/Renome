@@ -6,15 +6,22 @@ $color-text: #404040;
 $color-accent: #985E5B;
 $color-bg: #EDEFF2;
 
-@mixin mq-pc() {
-  @media (min-width:800px) {
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 800px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+  ) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
 }
 
-@mixin inner($w: 1200) {
-  max-width: $w + px;
-  width: 88%;
+@mixin inner($w: 88%, $mw: 1200px) {
+  width: $w;
+  max-width: $mw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -37,13 +44,14 @@ $color-bg: #EDEFF2;
   margin-bottom: (40/20)+em;
   padding-bottom: (20/20)+em;
   border-bottom: 2px solid #DDDDDD;
-  font-size: rem(20);
-  font-weight: bold;
-  line-height: (24/20);
+  font-size: rem(20
+  );
+font-weight: bold;
+line-height: (24/20);
 
-  @include mq-pc() {
-    margin-left: 0;
-  }
+@include mq(md) {
+  margin-left: 0;
+}
 }
 
 /* BASE
@@ -51,7 +59,7 @@ $color-bg: #EDEFF2;
 html {
   font-size: (15/16) * 100%;
 
-  @include mq-pc() {
+  @include mq(md) {
     font-size: (18/16) * 100%;
   }
 }
@@ -101,7 +109,7 @@ a {
   &__inner {
     @include inner();
 
-    @include mq-pc() {
+    @include mq(md) {
       @include flex(center);
     }
   }
@@ -111,7 +119,7 @@ a {
     margin-right: auto;
     margin-bottom: (20/15)+em;
 
-    @include mq-pc() {
+    @include mq(md) {
       margin: 0;
     }
   }
@@ -143,7 +151,7 @@ a {
   line-height: 1;
   text-align: center;
 
-  @include mq-pc() {
+  @include mq(md) {
     width: 100%;
   }
 }
@@ -181,7 +189,7 @@ a {
   &__inner {
     @include inner();
 
-    @include mq-pc() {
+    @include mq(md) {
       @include flex();
     }
   }
@@ -190,7 +198,7 @@ a {
 .about {
   margin-bottom: (90/15)+em;
 
-  @include mq-pc() {
+  @include mq(md) {
     width: (700/1200)*100%;
   }
 
@@ -199,7 +207,7 @@ a {
   }
 
   &__list {
-    @include mq-pc() {
+    @include mq(md) {
       @include flex();
     }
   }
@@ -207,7 +215,7 @@ a {
   &__item {
     margin-bottom: (60/15)+em;
 
-    @include mq-pc() {
+    @include mq(md) {
       width: (330/700)*100%;
       margin-bottom: 0;
     }
@@ -217,7 +225,7 @@ a {
 .info {
   margin-bottom: (90/15)+em;
 
-  @include mq-pc() {
+  @include mq(md) {
     width: (400/1200)*100%;
   }
 
