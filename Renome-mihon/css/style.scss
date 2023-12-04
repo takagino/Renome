@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 800px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+  ) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 @mixin inner($w: (560/640)*100%, $mw: 1200px) {
   width: $w;
   max-width: $mw;
@@ -16,24 +29,35 @@
 
 html {
   font-size: (15/16)+em;
+
+  @include mq(md) {
+    font-size: (18/16)+em;
+  }
 }
 
 body {
-  font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-family: "Helvetica",
+    "Helvetica Neue",
+    "Yu Gothic",
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Meiryo",
+    sans-serif;
 }
 
 .header {
   padding: 40px 0;
 
   &__inner {
-    @include inner();
-  }
+    @include inner(
+  );
+}
 
-  &__logo {
-    img {
-      margin: auto;
-    }
+&__logo {
+  img {
+    margin: auto;
   }
+}
 }
 
 .visual {

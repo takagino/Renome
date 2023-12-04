@@ -1,6 +1,11 @@
 html {
   font-size: 0.9375em;
 }
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 1.125em;
+  }
+}
 
 body {
   font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
