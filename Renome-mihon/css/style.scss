@@ -35,3 +35,20 @@ body {
     }
   }
 }
+
+.visual {
+  margin-bottom: (60/15)+em;
+}
+
+.message {
+  margin-bottom: (90/15)+em;
+  text-align: center;
+
+  &__inner {
+    @include inner();
+
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}

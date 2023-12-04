@@ -18,4 +18,22 @@ body {
 .header__logo img {
   margin: auto;
 }
+
+.visual {
+  margin-bottom: 4em;
+}
+
+.message {
+  margin-bottom: 6em;
+  text-align: center;
+}
+.message__inner {
+  width: 87.5%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.message__inner p {
+  margin-bottom: 1em;
+}
 /*# sourceMappingURL=style.css.map */
