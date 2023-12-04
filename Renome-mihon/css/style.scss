@@ -174,4 +174,31 @@ body {
   @include mq(md) {
     width: (410/1200)*100%;
   }
+
+  &__item {
+    @include flex();
+    margin-bottom: (30/15)+em;
+  }
+
+  &__term {
+    width: (80+12)+px;
+    margin-right: (30/15)+em;
+    padding: 8px 12px 8px 0;
+    border-right: 2px solid;
+    border-bottom: 1px solid;
+    color: $color-accent;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1;
+  }
+
+  &__desc {
+    flex: 1;
+  }
+
+  &__item {
+    a {
+      overflow-wrap: anywhere;
+    }
+  }
 }

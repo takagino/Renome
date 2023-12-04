@@ -147,4 +147,28 @@ body {
     width: 34.1666666667%;
   }
 }
+.info__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.info__term {
+  width: 92px;
+  margin-right: 2em;
+  padding: 8px 12px 8px 0;
+  border-right: 2px solid;
+  border-bottom: 1px solid;
+  color: #985E5B;
+  font-weight: bold;
+  text-align: right;
+  line-height: 1;
+}
+.info__desc {
+  flex: 1;
+}
+.info__item a {
+  overflow-wrap: anywhere;
+}
 /*# sourceMappingURL=style.css.map */
