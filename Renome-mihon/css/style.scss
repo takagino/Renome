@@ -92,6 +92,32 @@ body {
   }
 }
 
+.card {
+  &__pic {
+    width: 100%;
+    margin-bottom: (30/15)+em;
+  }
+}
+
+.btn {
+  display: block;
+  width: 300px;
+  margin-top: (45/15)+em;
+  margin-left: auto;
+  padding: (20/15)+em;
+  background-color: $color-accent;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: $color-text;
+}
+
 .visual {
   margin-bottom: (60/15)+em;
 }

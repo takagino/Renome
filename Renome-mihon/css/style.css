@@ -57,6 +57,30 @@ body {
   font-size: 0.8rem;
 }
 
+.card__pic {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.btn {
+  display: block;
+  width: 300px;
+  margin-top: 3em;
+  margin-left: auto;
+  padding: 1.3333333333em;
+  background-color: #985E5B;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #404040;
+}
+
 .visual {
   margin-bottom: 4em;
 }
