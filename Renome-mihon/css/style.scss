@@ -108,3 +108,25 @@ body {
     }
   }
 }
+
+.contents {
+  &__inner {
+    @include inner();
+
+    @include mq(md) {
+      @include flex();
+    }
+  }
+}
+
+.about {
+  @include mq(md) {
+    width: (700/1200)*100%;
+  }
+}
+
+.info {
+  @include mq(md) {
+    width: (410/1200)*100%;
+  }
+}
