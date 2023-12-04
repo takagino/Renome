@@ -7,6 +7,13 @@
   margin-right: auto;
 }
 
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
 html {
   font-size: (15/16)+em;
 }
@@ -16,7 +23,15 @@ body {
 }
 
 .header {
+  padding: 40px 0;
+
   &__inner {
     @include inner();
+  }
+
+  &__logo {
+    img {
+      margin: auto;
+    }
   }
 }
