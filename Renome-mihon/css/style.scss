@@ -112,6 +112,10 @@ body {
   text-align: center;
   text-decoration: none;
   transition: .3s;
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .btn:hover {
@@ -140,7 +144,7 @@ body {
     @include inner();
 
     @include mq(md) {
-      @include flex();
+      @include flex(stretch);
     }
   }
 }
@@ -148,6 +152,21 @@ body {
 .about {
   @include mq(md) {
     width: (700/1200)*100%;
+  }
+
+  &__list {
+    @include mq(md) {
+      @include flex(stretch);
+    }
+  }
+
+  &__item {
+    margin-bottom: (60/15)+em;
+
+    @include mq(md) {
+      width: (330/700)*100%;
+      margin-bottom: 0;
+    }
   }
 }
 
