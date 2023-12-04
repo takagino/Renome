@@ -35,10 +35,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 800px) {
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .footer__logo {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.3333333333em;
+}
+@media screen and (min-width: 800px) {
+  .footer__logo {
+    margin: 0;
+  }
 }
 .footer__copy {
   font-size: 0.8rem;

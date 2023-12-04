@@ -71,12 +71,20 @@ body {
 
   &__inner {
     @include inner();
+
+    @include mq(md) {
+      @include flex();
+    }
   }
 
   &__logo {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: (20/15)+em;
+
+    @include mq(md) {
+      margin: 0;
+    }
   }
 
   &__copy {
