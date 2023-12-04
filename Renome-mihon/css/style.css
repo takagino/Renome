@@ -24,6 +24,26 @@ body {
   margin: auto;
 }
 
+.footer {
+  padding: 40px 0;
+  background-color: #EDEFF2;
+  text-align: center;
+}
+.footer__inner {
+  width: 87.5%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.3333333333em;
+}
+.footer__copy {
+  font-size: 0.8rem;
+}
+
 .visual {
   margin-bottom: 4em;
 }
