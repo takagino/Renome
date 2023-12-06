@@ -31,6 +31,23 @@ $breakpoints: (
   align-items: $a;
 }
 
+@mixin title-main() {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: (40/20) + em;
+  padding-bottom: (20/20) + em;
+  border-bottom: 2px solid #ddd;
+  font-size: (20/15) + rem;
+  font-weight: bold;
+  line-height: (24/20
+  );
+
+@include mq(md) {
+  margin-left: 0;
+}
+}
+
 html {
   font-size: (15/16)+em;
 
@@ -49,19 +66,37 @@ body {
     sans-serif;
 }
 
+/* 改行 */
+.mobile {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.pc {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+span {
+  display: inline-block;
+}
+
 .header {
   padding: 40px 0;
 
   &__inner {
-    @include inner(
-  );
-}
-
-&__logo {
-  img {
-    margin: auto;
+    @include inner();
   }
-}
+
+  &__logo {
+    img {
+      margin: auto;
+    }
+  }
 }
 
 .footer {
@@ -94,8 +129,14 @@ body {
 
 .card {
   &__pic {
-    width: 100%;
     margin-bottom: (30/15)+em;
+    aspect-ratio: 330/200;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -124,6 +165,16 @@ body {
 
 .visual {
   margin-bottom: (60/15)+em;
+
+  &__pic {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    @include mq(md) {
+      height: 600px;
+    }
+  }
 }
 
 .message {
@@ -154,6 +205,10 @@ body {
     width: (700/1200)*100%;
   }
 
+  &__title {
+    @include title-main();
+  }
+
   &__list {
     @include mq(md) {
       @include flex(stretch);
@@ -173,6 +228,10 @@ body {
 .info {
   @include mq(md) {
     width: (410/1200)*100%;
+  }
+
+  &__title {
+    @include title-main();
   }
 
   &__item {
